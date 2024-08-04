@@ -3,5 +3,3 @@
 node_modules
 dist
 .env
-**/protected_routes.js
-protected_routes.js
