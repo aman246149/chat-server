@@ -1,6 +1,7 @@
 const express = require('express');
 const userRoute = require('./router/user');
 const mongoose = require('mongoose');
+require('dotenv').config();
 const protected = require('./middleware/protected_route');
 const bodyParser = require('body-parser');
 const cors = require('cors');

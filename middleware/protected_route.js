@@ -3,9 +3,9 @@ const { CognitoJwtVerifier } = require('aws-jwt-verify');
 
 // Initialize the verifier with your user pool ID and client ID
 const verifier = CognitoJwtVerifier.create({
-    userPoolId: "ap-south-1_TDPIRr796",
-    tokenUse: "id",  // Use 'id' if you want to verify ID tokens instead
-    clientId: "66g8eq50ccoo83b529fk3skpa0",
+    userPoolId: process.env.AWS_USER_POOL_ID,
+    tokenUse: process.env.AWS_TOKEN_USE,  // Use 'id' if you want to verify ID tokens instead
+    clientId: process.env.AWS_CLIENT_ID,
 });
 
 const verifyToken = async (token) => {
