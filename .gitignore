@@ -1,0 +1,5 @@
+
+//ignore all unnecessary files
+node_modules
+dist
+.env
