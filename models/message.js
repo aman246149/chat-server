@@ -10,6 +10,7 @@ const messageSchema = new mongoose.Schema({
     senderStatus: { type: String, default: 'sent' },
     receiver: { type: String, required: true },
     timestamp: { type: Number, default: Date.now },
+    type: { type: String, required: true },
 });
 
 const Message = mongoose.model('Message', messageSchema);

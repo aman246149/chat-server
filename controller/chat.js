@@ -15,7 +15,7 @@ module.exports = (io) => {
         });
 
         // Listen for messages in a group chat
-        socket.on("groupMessage", async ({ groupName, message, userName, senderId, receiverId }) => {
+        socket.on("groupMessage", async ({ groupName, message, userName, senderId, receiverId, type }) => {
             console.log(`Message from ${socket.id} in ${groupName}: ${message}`);
 
             try {
@@ -23,6 +23,7 @@ module.exports = (io) => {
                     message: message,
                     sender: senderId,
                     receiver: receiverId,
+                    type: type
                 });
 
                 await newMessage.save();
