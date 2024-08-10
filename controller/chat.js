@@ -45,10 +45,10 @@ module.exports = (io) => {
                     sender: socket.id,
                     ...newMessage.toObject(),
                 });
-                socket.emit("newMessage", {
-                    sender: socket.id,
-                    ...newMessage.toObject(),
-                });
+                // socket.emit("newMessage", {
+                //     sender: socket.id,
+                //     ...newMessage.toObject(),
+                // });
             } catch (error) {
                 console.error('Error processing message:', error);
             }
